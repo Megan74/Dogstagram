@@ -1,0 +1,15 @@
+{
+  background-color: "#ffffff",
+description: "save your doggo",
+display : "standalone",
+name="Dogstagram",
+orientation="any",
+  "scope"= "/",
+  "short_name": "Dogstagram",
+"start_url": "#ff6346",
+  "icons": [
+  {
+  "src":"https://cdn.glitch.com/8e5bb503-a352-40bd-87bd-d96bac58b9b0%2Ffavicon.ico?v=1623071189790",
+  "type": "img/png"
+}
+  ]

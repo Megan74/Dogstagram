@@ -1,0 +1,126 @@
+body{
+  margin:0;
+ font-family: 'Open Sans', sans-serif;
+  background: url(https://cdn.glitch.com/8c995165-2303-4457-a458-2b353ff3e9a1%2Fbg.jpg?v=1633185706738) #f2f2f2;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 320px 120px 1fr;
+  grid-template-areas: 
+      "title title"
+      "card card"
+      "nope fav"
+      "favourites favourites";
+}
+
+.title {
+  grid-area: title;
+  margin: 1em;
+ font-family: 'Fredoka One', cursive;
+  font-weight:bolder;
+  font-size: clamp(40px, 5vw, 3rem);
+  text-align: center;
+  color:tomato;  
+}
+
+.card {
+  grid-area: card;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+    border-radius: 25px;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 10px solid white;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.5);
+}
+
+button{
+  width:70px;
+  height: 70px;
+  margin: 20px 1em;
+  border: 8px solid white;
+  border-radius: 50%;
+  color: transparent;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px 5px rgba(0,0,0,0.5);
+
+}
+
+.nope{
+  grid-area: nope;
+  background: url(https://cdn.glitch.com/381dc777-702c-41b2-82aa-cac2e30d38de%2Funchecked.png?1522935023612) tomato center no-repeat;
+  background-size: 20px;
+  justify-self: end;
+}
+
+.fav {
+  grid-area: fav;
+  background: #63dd9a url('https://cdn.glitch.com/381dc777-702c-41b2-82aa-cac2e30d38de%2Fchecked%20(1).png?1522935023792') no-repeat center;
+  background-size: 26px;
+}
+
+.fav:hover {
+  background-color: #51c384;  
+}
+
+h2{
+  position: sticky;
+  top: 0;
+  font-family: 'Fredoka One', cursive;
+  font-style: underline;
+  margin: 1em;
+  padding: 1em;
+  color: tomato;
+}
+
+.favourites{
+  grid-area: favourites;
+  overflow-y: auto; 
+  
+}
+.favourites-list{
+ display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+}
+
+.favourites-item {
+position:relative;  
+  list-style: none;
+  margin: 15px;
+}
+
+.favourites-img{
+   width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid white;
+  
+}
+
+.remove{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  margin:0;
+  border: 2px solid white; 
+  background: tomato url(381dc777-702c-41b2-82aa-cac2e30d38de%2Funchecked.png?1522935023612);
+  background-size: 10px;
+}
+
+.nope:hover,
+.remover:hover{
+ background-color: #da553d; 
+}
+
